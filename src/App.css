@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 } */
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.row:nth-of-type(even) {
+  background-color: rgba(0,0,0,.05);
+  border-color: black !important;
+}

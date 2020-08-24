@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" href="http://localhost:3000/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./MovieDB API_files/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>MovieDB API</title>
+<style type="text/css">body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+</style><style type="text/css">/* .App {
+  text-align: right;
+} */
+/* 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.row:nth-of-type(even) {
+  background-color: rgba(0,0,0,.05);
+}
+
+.row {
+  border-color:#dee2e6;
+  border-width: 12px;
+
+}
+  </style></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="App"><nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="http://localhost:3000/#"><img src="./MovieDB API_files/tmdb-logo.png" width="80" height="80" class="d-inline-block align-top mr-sm-2" alt="The Movie DB Logo"><span class="display-4">MovieDB API</span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarTogglerDemo03"><form class="form-inline my-2 my-lg-0"><input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Enter search term" aria-label="Search"><button class="btn btn-outline-success btn-lg my-2 my-sm-0" type="submit">Search</button></form></div></nav><div class="container-fluid"><div class="row m-3 p-3 rounded" style="
+    border: 12px;
+"><div class="col-sm-4"><img src="./MovieDB API_files/poster-not-found.jpg" alt="Battle Zone" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Vengadores</h1><p>Una banda de mineros buscadores de oro se unen para enfrentarse a un terrateniente que, además de intentar aprovecharse de ellos, está intentando sabotear el movimiento que intenta unificar el territorio de California.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/oHmo5PcKo3JQXnhKjC90gFSj29z.jpg" alt="The Revengers" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los vengadores</h1><p>La tranquila vida del ranchero John Benedict se ve truncada cuando un grupo de comanches destruye su granja y asesina a su familia. Desesperado por haber perdido lo que más quería, Benedict saca de la cárcel a un grupo de convictos despiadados que le ayudarán a encontrar a los culpables y matarlos.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/fpG1NDbcLV2a7c8X7LC4FPISBT7.jpg" alt="Next Avengers: Heroes of Tomorrow" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Nuevos Vengadores: Heroes del mañana</h1><p>Cada vez que las fuerzas del mal amenazaron a la Humanidad, los mayores héroes de la Tierra, Los Vengadores, estaban allí para pararles, hasta que realizaron el sacrificio definitivo en su lucha final contra el robot indestructible Ultron. Pero todo no estaba perdido para Tony Stark (Iron Man), quien mantuvo a salvo a los hijos de Los Vengadores y los educó para convertirse en los héroes adolescentes del mañana.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/tyKKKSvjEgDVQ6vtm8vzL5Zx06c.jpg" alt="The Avengers" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los Vengadores</h1><p>Cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial, Nick Fury, director de la Agencia SHIELD, decide reclutar a un equipo para salvar al mundo de un desastre casi seguro. Adaptación del cómic de Marvel "Los Vengadores", el legendario grupo de superhéroes formado por Ironman, Hulk, Thor y el Capitán América entre otros.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/iMCkGHVrYRdqKROPRPmVaJVSlg3.jpg" alt="Ultimate Avengers: The Movie" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Ultimate Avengers</h1><p>Estrenada en USA y Europa directamente en video y DVD, La historia de Ultimate Vengadores está basada en el primer arco argumental de The Ultimates, en donde se nos presenta al grupo de superhéroes formado por Iron Man, Thor, La Avispa, El Hombre Gigante y Hulk, que se unen a un Capitán América recién rescatado del hielo que le ha aprisonado durante cinco décadas, desde el final de la II Guerra Mundial.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/iE73CRlWJSMH3gtBxRZO1NUNlJU.jpg" alt="洪熙官" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los vengadores de Shaolin</h1><p>Hung Hsi Kuan huye del incendio provocado de su templo Shaolin, donde su maestro y sus compañeros han caído bajo las llamas. Tiempo después, Hung se casa con Yung, una experta del estilo de lucha de la Grulla. Aunque llevan una vida doméstica y tienen un hijo, Wen Ding, ninguno de los dos deja de entrenar y Hung no ha abandonado la idea de la venganza. Su hijo crece sano y es cada vez más fuerte, aunque prefiere el estilo de lucha de su madre al del Tigre, el que practica su padre. Hung rehúsa aprender las técnicas de la Grulla, pero ahora que su hijo ya es tan capaz de luchar como él, siente que la venganza está más cerca que nunca...</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/uiPiWppquuN0hx8vHbR3MWYjjT9.jpg" alt="The Avenging Angel" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los ángeles vengadores</h1><p>Miles es un pistolero contratado para proteger la vida del jefe visible de su fe, Brigham Young, de sus enemigos. Miles tendrá que atrapar a los responsables de un atentado contra Young.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/sMFyYZR9krqcQC99G6jnb10Zv4P.jpg" alt="Ultimate Avengers 2: Rise of the Panther" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Ultimate Avengers 2: Rise of the Panther</h1><p>Secuela de "Ultimate Avengers" lanzada directamente al mercado del DVD y vídeo. Continúa la historia donde la dejaba el original: Pantera Negra, soberano de un misterioso reino africano, pedirá ayuda al Capitán América tras la muerte de su padre a manos de Kleiser, antiguo enemigo de los superhéroes, que está al mando de la invasión extraterrestre que amenaza la Tierra. Los Vengadores viajarán a África para librar una sangrienta batalla.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/ksBQ4oHQDdJwND8H90ay8CbMihU.jpg" alt="Avengers: Infinity War" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Vengadores: Infinity War</h1><p>El todopoderoso Thanos ha despertado con la promesa de arrasar con todo a su paso, portando el Guantelete del Infinito, que le confiere un poder incalculable. Los únicos capaces de pararle los pies son los Vengadores y el resto de superhéroes de la galaxia, que deberán estar dispuestos a sacrificarlo todo por un bien mayor. Capitán América e Ironman deberán limar sus diferencias, Black Panther apoyará con sus tropas desde Wakanda, Thor y los Guardianes de la Galaxia e incluso Spider-Man se unirán antes de que los planes de devastación y ruina pongan fin al universo. ¿Serán capaces de frenar el avance del titán del caos?</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/1p5thyQ4pCy876HpdvFARqJ62N9.jpg" alt="The Avengers" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los vengadores</h1><p>El apuesto John Steed (Ralph Fiennes) y la sofisticada y astuta Emma Peel (Uma Thurman) son dos agentes secretos que despliegan estilo y elegancia en su lucha contra el crimen. Sir August de Wynter (Sean connery), un antiguo miembro del Ministerio del Interior, es un hombre muy rico e inteligente que planea controlar el mundo por medio de una modernísima máquina del tiempo que representa una grave amenaza para la humanidad, que se verá expuesta a imprevisibles y violentas tormentas de hielo o a temperaturas abrasadoras. Pero nuestros héroes no pierden la calma ni siquiera en situaciones tan aparentemente irresolubles.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/SWfuMs4doCHcrz0InTh785SpQU.jpg" alt="Avengers: Age of Ultron" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Vengadores: La era de Ultrón</h1><p>Cuando Tony Stark intenta reactivar un programa caído en desuso cuyo objetivo es mantener la paz, las cosas empiezan a torcerse y los héroes más poderosos de la Tierra, incluyendo a Iron Man, Capitán América, Thor, El Increíble Hulk, Viuda Negra y Ojo de Halcón, tendrán que afrontar la prueba definitiva cuando el destino del planeta se ponga en juego. Cuando el villano Ultron emerge, le corresponderá a Los Vengadores detener sus terribles planes, que junto a incómodas alianzas llevarán a una inesperada acción que allanará el camino para una épica y única aventura.</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/br6krBFpaYmCSglLBWRuhui7tPc.jpg" alt="Avengers: Endgame" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Vengadores: Endgame</h1><p>Después de los eventos devastadores de 'Vengadores: Infinity War', el universo está en ruinas debido a las acciones de Thanos. Con la ayuda de los aliados que quedaron, los Vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar cuáles sean las consecuencias... Cuarta y última entrega de la saga "Vengadores".</p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/awI1NwdEZHfr05pMBx4nD6HM0U.jpg" alt="Новые приключения неуловимых" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Новые приключения неуловимых</h1><p></p></div></div><div class="row m-3 p-3 rounded"><div class="col-sm-4"><img src="./MovieDB API_files/6Rg1ZbSI5eJ5PeJa6fcBfiSeDbm.jpg" alt="アベンジャーズ コンフィデンシャル：ブラック・ウィドウ ＆ パニッシャー" class="img-thumbnail"></div><div class="col-sm-8"><h1 class="display-5">Los Vengadores: Justicia y venganza</h1><p>En esta película, y una vez más, el destino del mundo está en peligro, puesto que una organización de criminales se quiere hacer con tecnología secreta de S.H.I.E.L.D., que si cae en malas manos puede ser muy peligrosa.  S.H.I.E.L.D. también está en peligro, puesto que lo primero que harían los terroristas sería eliminar esa unidad para tener el camino libre y llevar a cabo sus intenciones sin que nadie opusiese resistencia.  Para evitar esto tanto de Punhiser como la Vida Negra van a tener que colaborar, aunque lo cierto es que el primero lo hace de mala gana y tras ser detenido al molestar a S.H.I.E.L.D. en una de sus investigaciones.  Ambos van a hacer lo posible, bajo una enorme responsabilidad, pues la estabilidad del mundo que conocemos depende de ellos y de nadie más, puesto que ellos son los únicos con la capacidad necesaria para hacer que los terroristas no lleven a cabo su maligno plan.</p></div></div></div></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+  <!-- Bootstrap js -->
+  <script src="./MovieDB API_files/jquery-3.3.1.slim.min.js.descarga" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="./MovieDB API_files/popper.min.js.descarga" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="./MovieDB API_files/bootstrap.min.js.descarga" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./MovieDB API_files/bundle.js.descarga"></script><script src="./MovieDB API_files/0.chunk.js.descarga"></script><script src="./MovieDB API_files/main.chunk.js.descarga"></script><script src="./MovieDB API_files/main.2312e65a9dbcf751d768.hot-update.js.descarga"></script>
+
+</body></html>
