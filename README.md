@@ -1,6 +1,6 @@
 # themoviedb_api
 
-Online app which allows you to search for movie titles through [The Movie Database](TMDb) API (https://www.themoviedb.org/).
+Online app which allows you to search for movie titles through [The Movie Database](https://www.themoviedb.org/) (TMDb) API .
 
 This proyect corresponds to the final challenge of the GeekHubs Academy online front-end bootcamp.
 
@@ -32,7 +32,7 @@ I'm in favor of taking advantage of the resources that are already created, even
 
 At startup, the site shows the 10 most popular movies according to The Movie Database (TMDb).
 
-To consult a title, type one or more terms related to the title, regardless of the original language, and all related titles will appear, with its poster, English title, title in its original language, genre and overview.
+To consult a title, type on the search bar one or more terms related to the title, regardless of the original language, and all related titles will appear, with its poster, english title, title in its original language, genre and overview.
 
 In case the poster, genre or overview is not available, the site will display an image or alternative text.
 
