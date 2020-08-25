@@ -1,41 +1,7 @@
-/* .App {
-  text-align: right;
-} */
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 .display-5 {
   font-size: 2.5rem;
   font-weight: 300;
@@ -43,6 +9,111 @@
 }
 
 .row:nth-of-type(even) {
-  background-color: rgba(0,0,0,.05);
+  background-color: rgba(0, 0, 0, 0.05);
   border-color: black !important;
+}
+
+footer ul {
+  max-width: 75%;
+  margin: auto;
+}
+.list-group-horizontal-lg li {
+  border: none !important;
+  padding: 0;
+}
+footer .btn-floating.btn-lg {
+  width: 61.1px;
+  height: 61.1px;
+}
+footer .btn-floating {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0;
+  margin: 10px;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50% !important;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 47px;
+  height: 47px;
+}
+footer .waves-effect {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+footer a.waves-effect,
+footer a.waves-light {
+  display: inline-block;
+}
+footer .btn-lg,
+footer .btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+footer .btn-floating:hover {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+footer .btn-floating.btn-lg svg {
+  font-size: 28px;
+  line-height: 61.1px;
+}
+footer .btn-floating svg {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+}
+footer .btn-li {
+  color: #fff;
+  background-color: #0082ca !important;
+}
+footer .btn-git {
+  color: #fff;
+  background-color: #333 !important;
+}
+.btn-tw {
+  color: #fff;
+  background-color: #55acee !important;
+}
+.cig:hover {
+  text-decoration: none;
+}
+.cig span {
+  border-bottom: 3px solid #0082ca;
+  font-size: 1.5em;
+  transition: all 0.25s linear;
+  position: relative;
+}
+
+.cig span:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #61a3ff;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform-origin: left;
+  transform: scale(0);
+  transition: 0.25s linear;
+}
+
+.cig span:hover:before {
+  transform: scale(1);
 }
