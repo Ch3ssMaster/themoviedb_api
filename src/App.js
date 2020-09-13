@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import MovieRow from './MovieRow'
-import DefaultRow from './DefaultRow'
-import MostPopular from './MostPopular'
+import './css/App.css';
+import logoSrc from './img/tmdb-logo.png';
+import noPoster from './img/poster-not-found.jpg';
+import MovieRow from './components/MovieRow'
+import DefaultRow from './components/DefaultRow'
+import MostPopular from './components/MostPopular'
+import Footer from './components/footer';
 
 class App extends Component {
   _isMounted = false;
@@ -12,7 +15,6 @@ class App extends Component {
     this.state = {
       rows: null,
     }
-    this.getGenres()
   }
   getGenres() {
     let query = 'https://api.themoviedb.org/3/genre/movie/list?api_key=f3f4d28e0e868813e48a9fd421a821aa&language=en-US'
@@ -25,22 +27,12 @@ class App extends Component {
         });
       })
   }
-  setSearchTerm(searchTerm) {
-    var query = ""
-    var mostPopular = false
-    if (!searchTerm) {
-      query = 'https://api.themoviedb.org/3/movie/popular?api_key=f3f4d28e0e868813e48a9fd421a821aa&language=en&page=1'
-      mostPopular = true
-    } else {
-      const urlString = 'https://api.themoviedb.org/3/search/movie?api_key=f3f4d28e0e868813e48a9fd421a821aa' +
-        '&language=en&query='
-      query = urlString + searchTerm.replace(/\s/g, '+')
-      mostPopular = false
-    }
+  getMovies = (mostPopular, query) => {
     fetch(query)
       .then(res => res.json())
       .then(res => {
         const movies = res.results;
+        // console.log(movies)
         var movieRows = []
         var movieRow = null;
         if (movies.length === 0) {
@@ -61,12 +53,12 @@ class App extends Component {
               movieGenre.push('No genres availables')
             }
             movie.genres = movieGenre.join(',')
-            if (movie.poster_path !== null) {
+            if (movie.poster_path) {
               movie.poster_src = 'https://image.tmdb.org/t/p/w780' + movie.poster_path
             } else {
-              movie.poster_src = 'poster-not-found.jpg';
+              movie.poster_src = noPoster.toString();
             }
-            if (movie.overview === "") {
+            if (!movie.overview) {
               movie.overview = React.createElement('strong', { className: 'text-warning' }, 'No overview available.')
             }
             movieRow = <MovieRow key={movie.id} movie={movie} />
@@ -80,10 +72,26 @@ class App extends Component {
         this.setState({ rows: movieRows },)
       })
   }
+  setSearchTerm(searchTerm) {
+    var query = ""
+    var mostPopular = false
+    if (!searchTerm) {
+      query = 'https://api.themoviedb.org/3/movie/popular?api_key=f3f4d28e0e868813e48a9fd421a821aa&language=en&page=1'
+      mostPopular = true
+    } else {
+      const urlString = 'https://api.themoviedb.org/3/search/movie?api_key=f3f4d28e0e868813e48a9fd421a821aa' +
+        '&language=en&query='
+      query = urlString + searchTerm.replace(/\s/g, '+')
+      mostPopular = false
+    }
+
+    this.getMovies(mostPopular, query)
+  }
   searchChangeHandler(event) {
     this.setSearchTerm(event.target.value)
   }
   componentDidMount() {
+    this.getGenres()
     this.setSearchTerm(false)
   }
 
@@ -92,7 +100,7 @@ class App extends Component {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <a className="navbar-brand" href="index.html">
-            <img src="tmdb-logo.png" width="80" height="80" className="d-block d-sm-inline-block align-top m-auto mr-sm-3" alt="The Movie DB Logo" />
+            <img src={logoSrc} width="80" height="80" className="d-block d-sm-inline-block align-top m-auto mr-sm-3" alt="The Movie DB Logo" />
             <span className="display-4">
               MovieDB API
             </span>
@@ -110,53 +118,8 @@ class App extends Component {
         </nav>
         <div className="container-fluid">
           {this.state.rows}
-
         </div>
-        {/* Footer */}
-        <footer className="pt-4 m-5 pt-md-5 border-top">
-          <div className="row justify-content-md-center text-center">
-            <div className="col-sm text-success mb-3">
-              <h5>
-                Antonio Cebrián
-          <small className="mb-3" id="date"> © </small>
-          2020
-              </h5>
-              <h6 className="text-primary">TheMovieDB API <br />
-                <span className="text-dark">v1.0.0-alpha</span>
-              </h6>
-            </div>
-            <div className="col-sm-auto mb-3">
-              <h5>My personal Website</h5>
-              <div className="hover-container my-3">
-                <a className="cig" href="http://clasesinformaticagranada.es/">
-                  <span>Clases Informática Granada</span>
-                </a>
-              </div>
-            </div>
-            <div className="col-sm mb-3">
-              <h5>Follow my work</h5>
-              <ul className="list-group list-group-horizontal-lg">
-                <li className="list-group-item flex-fill">
-                  <a className="btn-floating btn-lg btn-li" type="button" role="button"
-                    href="https://www.linkedin.com/in/antonio-cebrián-mesa">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li className="list-group-item flex-fill">
-                  <a className="btn-floating btn-lg btn-git" type="button" role="button" href="https://github.com/Ch3ssMaster">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-                <li className="list-group-item flex-fill">
-                  <a className="btn-floating btn-lg btn-tw" type="button" role="button"
-                    href="https://twitter.com/hacking_the_web">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }

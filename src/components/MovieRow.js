@@ -1,10 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 class MovieRow extends React.Component {
-    viewMovie() {
-        let movieURL = 'https://www.themoviedb.org/movie/' + this.props.movie.id;
-        window.open(movieURL, '_blank');
-    }
 
     render() {
         return (<div className="row m-3 p-3 rounded" key={this.props.movie.id}>
@@ -17,9 +13,9 @@ class MovieRow extends React.Component {
                 <h5><strong className="text-info">Original title:</strong> {this.props.movie.original_title}</h5>
                 <h6><strong className="text-success">Genres:</strong> {this.props.movie.genres}</h6>
                 <p>{this.props.movie.overview}</p>
-                <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.viewMovie.bind(this)}>
-                    View more details
-                </button>
+                <a href={'https://www.themoviedb.org/movie/' + this.props.movie.id}
+                    className="btn btn-info btn-lg btn-block"
+                    target="_blank" rel="noopener noreferrer">View more details</a>
             </div>
         </div>)
     }
